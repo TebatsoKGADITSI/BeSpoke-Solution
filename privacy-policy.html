@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LOOOM AI | Bespoke Solutech</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="LOOOM AI by Bespoke Solutech - AI-powered audit automation software for enterprise audit teams.">
+<link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+/* ================= GLOBAL ================= */
+* {margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif;}
+body {background:#f4f6f9;color:#1c1c1c;line-height:1.6;}
+.container {width:90%;max-width:1200px;margin:auto;}
+h1,h2,h3,h4 {margin-bottom:15px;}
+p,li {margin-bottom:10px;}
+ul,ol {margin-left:20px;margin-bottom:20px;}
+a {text-decoration:none;color:#2e6cff;}
+a:hover {text-decoration:underline;}
+.btn-primary {background:#2e6cff;color:#fff;padding:10px 20px;border-radius:6px;font-size:14px;display:inline-block;transition:0.3s;}
+.btn-primary:hover {background:#1c4ed8;}
+
+/* ================= NAVBAR ================= */
+.navbar {background:#2D1B4E;padding:18px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 6px rgba(0,0,0,0.2);}
+.nav-container {display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+.logo {color:#fff;font-weight:bold;font-size:18px;}
+.nav-links {display:flex;gap:25px;list-style:none;}
+.nav-links a {color:#ddd;font-size:14px;transition:0.3s;}
+.nav-links a.active,.nav-links a:hover {color:#fff;}
+
+/* ================= DROPDOWN ================= */
+/* ================= DROPDOWN ================= */
+.nav-menu li {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #2D1B4E;
+    border-radius: 6px;
+    min-width: 220px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    flex-direction: column;
+    z-index: 1000;
+}
+
+/* SHOW WHEN ACTIVE */
+.dropdown.active .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content li {
+    width: 100%;
+}
+
+.dropdown-content a {
+    padding: 10px 15px;
+    display: block;
+    color: #fff;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background: #6C5CE7;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:768px){
+    .nav-links {flex-direction:column;gap:10px;}
+    .dropdown-content {position:static;width:100%;}
+}
+
+/* ================= HERO / HEADER ================= */
+.hero {background:#2D1B4E;color:#fff;padding:80px 0;text-align:center;}
+.hero h1 {font-size:36px;margin-bottom:20px;}
+.hero p {font-size:18px;margin-bottom:20px;}
+
+/* ================= COMPANY BOX & SECTIONS ================= */
+.company-box {background:#eef2ff;padding:25px;border-radius:8px;margin-bottom:30px;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+.section {margin-bottom:50px;padding:20px;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+.section h2 {color:#2D1B4E;border-left:4px solid #2e6cff;padding-left:10px;}
+.section h3 {color:#1c1c1c;margin-top:20px;}
+ul li {line-height:1.5;}
+
+/* ================= FOOTER ================= */
+.footer {background:#2D1B4E;color:#ccc;padding:60px 20px 30px;}
+.footer-grid {display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;}
+.footer h4 {color:#fff;margin-bottom:10px;}
+.footer a {color:#ccc;transition:0.3s;}
+.footer a:hover {color:#2e6cff;}
+.footer-bottom {text-align:center;margin-top:40px;font-size:13px;color:#777;}
+
+/* FOOTER SOCIAL ICONS MODERN STYLE */
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;           
+    height: 40px;            
+    border-radius: 50%;     
+    color: #fff;            
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+
+.social-icon.tiktok {
+    background-color: #000000;  
+}
+.social-icon.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); /* Instagram gradient */
+}
+.social-icon.x-twitter {
+    background-color: black;   
+}
+.social-icon.facebook {
+    background-color: #1877F2;  
+}
+
+/* HOVER EFFECTS */
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    opacity: 0.9;  /* Slightly transparent on hover for effect */
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+<header class="navbar">
+    <div class="container nav-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.jpeg" alt="BeSpoke Solutech Logo" style="height:40px; vertical-align:middle;">
+                <span style="margin-left:10px; color:#fff; font-weight:bold; font-size:18px;">Bespoke Solutech</span>
+            </a>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="product.html" class="active">Products</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#">Legal & Policy ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy (POPIA compliant)</a></li>
+                        <li><a href="refund-cancellation.html">Refund & Cancellation Policy</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <a href="https://looom.co.za/contact/" class="btn-primary" target="_blank">Request Demo</a>
+    </div>
+</header>
+
+<!-- ================= PAGE CONTENT ================= -->
+<div class="container">
+
+    <h1>Privacy Policy</h1>
+    <p><strong>BeSpoke Solutech (Pty) Ltd</strong></p>
+    <p><strong>Effective Date:</strong> 2026</p>
+
+    <div class="company-box">
+        <p><strong>About BeSpoke Solutech</strong></p>
+        <p>
+            Established in 2025, BeSpoke Solutech is a digital solutions company that operates and manages
+            digital products and services for businesses and organisations. We focus on delivering reliable,
+            professionally run digital solutions with clear accountability and long-term support.
+        </p>
+        <p>
+            Our work spans software, digital platforms, and technology-enabled services.
+            We prioritise operational discipline, transparency, and performance to ensure
+            every solution we manage is commercially sustainable and professionally supported.
+        </p>
+    </div>
+
+    <!-- ================= RESPONSIBLE PARTY ================= -->
+    <div class="section" id="responsible-party">
+        <h2>1. Responsible Party</h2>
+        <p>BeSpoke Solutech (Pty) Ltd is the Responsible Party for the processing of personal information in terms of POPIA.</p>
+        <p>
+            <strong>Physical Address:</strong><br>
+            Unit H22, Workpods<br>
+            1024 Brand Road<br>
+            President Park AH<br>
+            Midrand, 1686<br><br>
+            <strong>Email:</strong> <a href="mailto:sales@bespokesoulutech.co.za">sales@bespokesoulutech.co.za</a><br>
+            <strong>Contact Number:</strong> <a href="tel:+27108807341">010 880 7341</a>
+        </p>
+    </div>
+
+    <!-- ================= INFORMATION WE COLLECT ================= -->
+    <div class="section" id="information-collect">
+        <h2>2. Information We Collect</h2>
+        <h3>2.1 Client & Prospect Information</h3>
+        <ul>
+            <li>Full name and surname</li>
+            <li>Email address</li>
+            <li>Contact number</li>
+            <li>Company name and job title</li>
+            <li>Billing and contractual information</li>
+        </ul>
+
+        <h3>2.2 Website & Technical Information</h3>
+        <ul>
+            <li>IP address</li>
+            <li>Browser and device information</li>
+            <li>Usage data and analytics</li>
+            <li>Cookies and similar technologies</li>
+        </ul>
+
+        <h3>2.3 Recruitment & Supplier Information</h3>
+        <ul>
+            <li>CVs, employment history and qualifications</li>
+            <li>Identity documentation (where legally required)</li>
+            <li>Company registration and tax information</li>
+            <li>Banking details (for payment purposes)</li>
+        </ul>
+    </div>
+
+    <!-- ================= PURPOSE OF PROCESSING ================= -->
+    <div class="section" id="purpose-processing">
+        <h2>3. Purpose of Processing</h2>
+        <ul>
+            <li>To provide and manage digital products and services</li>
+            <li>To operate and scale technology platforms</li>
+            <li>To manage contracts and billing</li>
+            <li>To respond to enquiries and demo requests</li>
+            <li>To send marketing communications (where consent is provided)</li>
+            <li>To comply with legal and regulatory obligations</li>
+            <li>To manage recruitment and supplier relationships</li>
+        </ul>
+        <p>BeSpoke Solutech does not sell personal information.</p>
+    </div>
+
+    <!-- ================= DATA SECURITY ================= -->
+    <div class="section" id="data-security">
+        <h2>4. Data Security</h2>
+        <p>We implement appropriate technical and organisational measures including encrypted communications (HTTPS), secure hosting environments, access control mechanisms, and regular system monitoring. While we take reasonable precautions, no system can be guaranteed fully secure.</p>
+    </div>
+
+    <!-- ================= YOUR RIGHTS ================= -->
+    <div class="section" id="your-rights">
+        <h2>5. Your Rights Under POPIA</h2>
+        <ul>
+            <li>Access your personal information</li>
+            <li>Request correction or deletion</li>
+            <li>Object to processing</li>
+            <li>Withdraw consent</li>
+            <li>Lodge a complaint with the Information Regulator (South Africa)</li>
+        </ul>
+        <p>To exercise these rights, contact us at <a href="mailto:sales@bespokesoulutech.co.za">sales@bespokesoulutech.co.za</a> or <a href="tel:+27108807341">010 880 7341</a>.</p>
+    </div>
+
+    <!-- ================= AMENDMENTS ================= -->
+    <div class="section" id="amendments">
+        <h2>6. Amendments</h2>
+        <p>We reserve the right to update this Privacy Policy from time to time. The updated version will be published with a revised effective date.</p>
+    </div>
+
+    <!-- ================= LEGAL & REGULATORY COMPLIANCE ================= -->
+    <div class="section" id="legal-compliance">
+        <h2>7. Legal & Regulatory Compliance</h2>
+        <ul>
+            <li><strong>POPIA, 2013</strong> – Governing lawful processing and protection of personal information.</li>
+            <li><strong>Electronic Communications and Transactions Act (ECTA)</strong> – Regulating electronic communications, online transactions, and data messages.</li>
+            <li><strong>Consumer Protection Act (CPA)</strong> – Ensuring fair, transparent, and responsible business practices.</li>
+        </ul>
+        <p>Where required, we ensure electronic communications, digital contracts, consumer interactions, and operational processes align with these legislative frameworks.</p>
+    </div>
+
+</div> <!-- End container -->
+
+<!-- ================= FOOTER ================= -->
+ <footer>
+
+        <div class="container">
+            <div class="footer-brand-section">
+                <div class="logo">
+                     <img src="images/main logo.jpeg" alt="Bespoke Solutech" class="logo" width="50">
+                <p class="tagline">Digital Solutions, Professionally Operated.</p>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> sales@bespokesolutech.co.za</p>
+                    <p><i class="fas fa-phone"></i> 010 880 7341</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Midrand, South Africa</p>
+                </div>
+                 <!-- ===== SOCIAL ICONS ===== -->
+<div class="social-icons">
+    <a href="https://www.tiktok.com/@bespokesolutech?is_from_webapp=1&sender_device=pc" target="_blank" class="social-icon tiktok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://www.instagram.com/bespokesolutech/" target="_blank" class="social-icon instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://x.com/BespokeSolutech" target="_blank" class="social-icon twitter">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61587888885633" target="_blank" class="social-icon facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+</div>
+            </div>
+
+            <div class="footer-links-section">
+                <div class="footer-column">
+                    <h4>COMPANY</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>LEGAL</h4>
+                    <ul>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="refund-cancellation.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>OFFICE</h4>
+                    <address>
+                        Unit H22, Workpods<br>
+                        1024 Brand Road<br>
+                        President Park AH<br>
+                        Midrand, 1686<br>
+                        South Africa
+                    </address>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+    <p>
+        © <span id="year"></span> Bespoke Solutech. All rights reserved.
+    </p>
+</div>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

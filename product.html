@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LOOOM AI | Bespoke Solutech</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="LOOOM AI by Bespoke Solutech - AI-powered audit automation software for enterprise audit teams.">
+<link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+
+/* ================= GLOBAL ================= */
+* {margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif;}
+body {background:#f4f6f9;color:#1c1c1c;line-height:1.6;}
+.container {width:90%;max-width:1200px;margin:auto;}
+h1,h2,h3,h4 {margin-bottom:15px;}
+p,li {margin-bottom:10px;}
+ul,ol {margin-left:20px; margin-bottom:20px;}
+a {text-decoration:none;}
+.btn-primary {background:#2D1B4E;color:#fff;padding:10px 20px;border-radius:4px;font-size:14px;display:inline-block;}
+.btn-outline {border:2px solid #fff;color:#fff;padding:10px 20px;border-radius:4px;margin-left:10px;display:inline-block;}
+
+/* ================= NAVBAR ================= */
+.navbar {background:#0d1b2a;padding:18px 0;position:sticky;top:0;z-index:1000;}
+.nav-container {display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+.logo {color:#fff;font-weight:bold;font-size:18px;}
+.nav-links {display:flex;gap:25px;list-style:none;}
+.nav-links a {color:#ddd;font-size:14px;}
+.nav-links a.active,.nav-links a:hover {color:#fff;}
+
+/* ================= DROPDOWN STYLES ================= */
+/* ================= DROPDOWN ================= */
+.nav-menu li {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #2D1B4E;
+    border-radius: 6px;
+    min-width: 220px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    flex-direction: column;
+    z-index: 1000;
+}
+
+/* SHOW WHEN ACTIVE */
+.dropdown.active .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content li {
+    width: 100%;
+}
+
+.dropdown-content a {
+    padding: 10px 15px;
+    display: block;
+    color: #fff;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background: #6C5CE7;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:768px){
+    .nav-links {flex-direction:column;gap:0;}
+    .dropdown-content {position:static;width:100%;}
+}
+
+/* ================= HERO ================= */
+.hero {background:#2D1B4E;color:#fff;padding:100px 0;}
+.hero-grid {display:flex;align-items:center;gap:50px;flex-wrap:wrap;}
+.hero-content {flex:1;min-width:280px;}
+.hero-content h1 {font-size:40px;margin-bottom:20px;}
+.hero-content p {margin-bottom:20px;}
+.hero-buttons a {margin-top:10px;}
+.hero-image {flex:1;min-width:280px;background:#fff;padding:20px;border-radius:8px;}
+
+/* ================= PROBLEM / OUTCOME ================= */
+.problem-outcome {padding:60px 0;text-align:center;}
+.problem-outcome ul {list-style: disc; margin-left:40px; text-align:left;}
+
+/* ================= METRICS ================= */
+.metrics {background:#fff;padding:60px 0;}
+.metrics-grid {display:flex;justify-content:space-around;text-align:center;flex-wrap:wrap;}
+.metric h3 {font-size:32px;color:#2e6cff;}
+
+/* ================= FEATURES ================= */
+.features {padding:100px 0;text-align:center;}
+.section-title {font-size:32px;margin-bottom:10px;}
+.section-subtitle {margin-bottom:50px;color:#666;}
+.feature-grid {display:flex;gap:30px;flex-wrap:wrap;justify-content:center;}
+.card {background:#fff;padding:40px;border-radius:8px;flex:1;min-width:280px;box-shadow:0 4px 10px rgba(0,0,0,0.05);text-align:left;}
+
+/* ================= BENEFITS ================= */
+.benefits {padding:80px 0;text-align:center;background:#f5f7fa;}
+.benefits ul {list-style: disc; margin-left:40px; text-align:left;}
+
+/* ================= ONBOARDING ================= */
+.onboarding {padding:80px 0;text-align:center;}
+.onboarding ol {margin-left:40px; text-align:left;}
+
+/* ================= INDUSTRIES SERVED ================= */
+.industries {padding:80px 0;text-align:center;}
+.industry-logos {display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin-top:30px;}
+.industry-logos div {background:#fff;padding:20px;width:140px;border-radius:6px;box-shadow:0 4px 10px rgba(0,0,0,0.05);font-weight:bold;}
+
+/* ================= COMPLIANCE & SECURITY ================= */
+.compliance {background:#e7f0ff;padding:80px 0;text-align:center;}
+.compliance-grid {display:flex;flex-wrap:wrap;justify-content:center;gap:30px;}
+.compliance-card {background:#fff;padding:30px;border-radius:8px;min-width:250px;box-shadow:0 4px 10px rgba(0,0,0,0.05);}
+.compliance-card h4 {margin-bottom:10px;color:#2e6cff;}
+
+/* ================= DASHBOARD MOCKUP ================= */
+.dashboard {padding:80px 0;text-align:center;background:#f0f4f8;}
+.dashboard-grid {display:flex;flex-wrap:wrap;gap:30px;justify-content:center;}
+.dashboard-card {background:#fff;padding:20px;border-radius:8px;flex:1 1 280px;min-width:280px;box-shadow:0 4px 10px rgba(0,0,0,0.05);}
+.dashboard-card h4 {margin-bottom:15px;font-size:16px;color:#2e6cff;}
+.bar {height:10px;background:#2e6cff;margin-bottom:10px;border-radius:4px;}
+.line {height:4px;background:#2e6cff;margin-bottom:8px;border-radius:4px;}
+.chart-label {font-size:12px;color:#555; margin-bottom:5px;}
+
+/* ================= CLIENTS ================= */
+.clients {padding:80px 0;text-align:center;}
+.client-logos {display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:30px;margin-bottom:30px;}
+.client-logos img {max-height:60px; object-fit:contain; filter:grayscale(100%); transition:filter 0.3s ease;}
+.client-logos img:hover {filter:none;}
+
+/* ================= FINAL CTA ================= */
+.final-cta {background:#6C5CE7;color:#fff;text-align:center;padding:80px 0;}
+
+/* ================= FOOTER ================= */
+.footer {background:#2D1B4E;color:#ccc;padding:60px 0 20px;}
+.footer-grid {display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;}
+.footer a {color:#ccc;}
+.footer-bottom {text-align:center;margin-top:40px;font-size:13px;color:#777;}
+
+/* FOOTER SOCIAL ICONS MODERN STYLE */
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;           
+    height: 40px;            
+    border-radius: 50%;     
+    color: #fff;            
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+
+.social-icon.tiktok {
+    background-color: #000000;  
+}
+.social-icon.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); /* Instagram gradient */
+}
+.social-icon.x-twitter {
+    background-color: black;   
+}
+.social-icon.facebook {
+    background-color: #1877F2;  
+}
+
+/* HOVER EFFECTS */
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    opacity: 0.9;  /* Slightly transparent on hover for effect */
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:768px){
+    .hero-grid,.metrics-grid,.feature-grid,.footer-grid,.industry-logos,.compliance-grid,.dashboard-grid{flex-direction:column;text-align:center;}
+    .btn-outline{margin-left:0;margin-top:10px;}
+    .problem-outcome ul,.benefits ul,.onboarding ol{margin-left:20px;text-align:left;}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+<header class="navbar">
+    <div class="container nav-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.jpeg" alt="BeSpoke Solutech Logo" style="height:40px; vertical-align:middle;">
+                <span style="margin-left:10px; color:#fff; font-weight:bold; font-size:18px;">Bespoke Solutech</span>
+            </a>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="product.html" class="active">Products</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+
+                <!-- Legal & Policy Dropdown -->
+                <li class="dropdown">
+                    <a href="#">Legal & Policy ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy (POPIA compliant)</a></li>
+                        <li><a href="refund-cancellation.html">Refund & Cancellation Policy</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <a href="index.html#contact" class="btn-primary" target="_blank">Request Demo</a>
+    </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-content">
+            <h1>️‍🔥Unlock Audit Intelligence with AI-Powered Precision</h1>
+            <p>LOOOM AI automates documentation, risk analysis, advanced reporting, and testing, transforming audit teams from manual processors into strategic intelligence drivers.</p>
+            <p>Streamline workflows, enhance compliance, and reduce operational friction across audit lifecycles.</p>
+            <div class="hero-buttons">
+                <a href="index.html#contact" class="btn-primary" target="_blank">Request Demo</a>
+                <a href="index.html#contact" class="btn-outline" target="_blank">Book Consultation</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- Dashboard cards with charts -->
+            <canvas id="auditLineChart" style="width:100%; max-height:200px;"></canvas>
+            <canvas id="riskPieChart" style="width:100%; max-height:200px; margin-top:20px;"></canvas>
+            <canvas id="tasksBarChart" style="width:100%; max-height:200px; margin-top:20px;"></canvas>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PROBLEM / OUTCOME ================= -->
+<section class="problem-outcome">
+    <h2>Why Traditional Audits Fall Behind</h2>
+    <p>Manual processes are slow, inconsistent, and costly; holding teams back from delivering high-quality insights on time.</p>
+    <ul>
+        <li>Routine documentation consumes hours of staff time</li>
+        <li>Sampling limits analytical depth</li>
+        <li>Risk detection often lacks consistency and coverage</li>
+    </ul>
+    <p>LOOOM AI replaces repetitive tasks with intelligent automation, giving your team the power to audit smarter, not harder.</p>
+</section>
+
+<!-- ================= METRICS ================= -->
+<section class="metrics">
+    <div class="container metrics-grid">
+        <div class="metric">
+            <h3>80%</h3>
+            <p>Faster Drafting</p>
+        </div>
+        <div class="metric">
+            <h3>50%</h3>
+            <p>Fewer Review Cycles</p>
+        </div>
+        <div class="metric">
+            <h3>40%</h3>
+            <p>Reduced Risk Errors</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">What is LOOOM AI?</h2>
+        <p class="section-subtitle">A next-generation AI-powered audit assistant designed for modern enterprises.</p>
+        <div class="feature-grid">
+            <div class="card">
+                <h3>AI Audit Assistant</h3>
+                <p>Draft, review, refine, and validate audit documentation with AI that checks your work, detects risks, and ensures audit quality.</p>
+            </div>
+            <div class="card">
+                <h3>Advanced Reporting & Analytics</h3>
+                <p>Full-population testing uncovers exceptions and insights traditional methods miss. Designed for auditors, not data scientists.</p>
+            </div>
+            <div class="card">
+                <h3>Knowledge Hub</h3>
+                <p>A centralized library that combines firm methodologies, templates, and insights with global frameworks, regulations, and best practices.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= BENEFITS ================= -->
+<section class="benefits">
+    <div class="container">
+        <h2>Deliver Measurable Business Outcomes</h2>
+        <ul>
+            <li><strong>Up to 80% faster drafting</strong> than manual documentation</li>
+            <li><strong>Up to 50% shorter review cycles</strong> so senior auditors focus on high-value work</li>
+            <li><strong>30–40% fewer risk identification errors</strong> through AI-assisted analysis</li>
+            <li><strong>100% compliance alignment</strong> with industry frameworks (COBIT, ISA, King IV, IFRS)</li>
+            <li><strong>Increased fee income</strong> by freeing team capacity for strategic work</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ================= INDUSTRIES SERVED ================= -->
+<section class="industries">
+    <div class="container">
+        <h2>Industries Served</h2>
+        <div class="industry-logos">
+            <div>Audit Firms</div>
+            <div>Consulting</div>
+            <div>Finance</div>
+            <div>IT Services</div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= COMPLIANCE & SECURITY ================= -->
+<section class="compliance">
+    <div class="container">
+        <h2>Compliance & Security Highlights</h2>
+        <div class="compliance-grid">
+            <div class="compliance-card">
+                <h4>Regulatory Compliance</h4>
+                <p>Aligned with COBIT, ISA, King IV, and IFRS frameworks.</p>
+            </div>
+            <div class="compliance-card">
+                <h4>Data Security</h4>
+                <p>Enterprise-grade encryption, GDPR-ready, role-based access control.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= DASHBOARD MOCKUP ================= -->
+<section class="dashboard">
+    <div class="container">
+        <h2>LOOOM AI Dashboard Overview</h2>
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <h4>Audit Completion</h4>
+                <div class="chart-label">Week 1</div><div class="bar" style="width:65%"></div>
+                <div class="chart-label">Week 2</div><div class="bar" style="width:72%"></div>
+                <div class="chart-label">Week 3</div><div class="bar" style="width:78%"></div>
+                <div class="chart-label">Week 4</div><div class="bar" style="width:85%"></div>
+            </div>
+            <div class="dashboard-card">
+                <h4>Risk Detection</h4>
+                <div class="chart-label">Low</div><div class="bar" style="width:50%"></div>
+                <div class="chart-label">Medium</div><div class="bar" style="width:30%"></div>
+                <div class="chart-label">High</div><div class="bar" style="width:20%"></div>
+            </div>
+            <div class="dashboard-card">
+                <h4>Review Cycles</h4>
+                <div class="chart-label">Completed</div><div class="bar" style="width:50%"></div>
+                <div class="chart-label">Pending</div><div class="bar" style="width:30%"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= ONBOARDING ================= --> <section class="onboarding"> <div class="container">
+     <h2>Getting Started with LOOOM AI</h2> 
+     <p>Quick setup, instant access, and guided support so your team is productive from day one.</p> 
+     <ol> <li><strong>Create Your Account</strong> — Sign up to receive your secure LOOOM AI workspace.</li> 
+    <li><strong>Configure Your Environment</strong> — Workflows, templates, and roles customized for your firm.</li>
+     <li><strong>Start Auditing Smarter</strong> — Streamline documentation, reporting, and analytics immediately.</li>
+     </ol> </div> </section>
+
+<!-- ================= CLIENTS ================= -->
+<section class="clients">
+    <div class="container">
+        <h2>Trusted by Forward-Thinking Firms</h2>
+        <div class="client-logos">
+            <div><img src="images/waterfall.png" alt="Waterfall Logo"></div>
+            <div><img src="images/xabacha.png" alt="Xabacha Logo"></div>
+        </div>
+        <p>Firms that value efficiency, precision, and innovation choose LOOOM AI to transform their audit operations.</p>
+    </div>
+</section>
+
+<!-- ================= PRICING / CONSULTATION ================= -->
+<section class="pricing">
+    <div class="container" style="text-align:center;padding:60px 0;background:#f5f7fa;">
+        <h2>Pricing & Consultation</h2>
+        <p>Pricing is tailored to your firm’s needs. Contact us to discuss a plan that fits your audit team size and requirements.</p>
+        <a href="hindex.html#contact" class="btn-primary" target="_blank">Request Pricing / Consultation</a>
+    </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final-cta">
+    <div class="container">
+        <p>Ready to boost audit quality, save time, and unlock deeper insights with AI-powered audit automation?</p>
+        <a href="index.html#contact" class="btn-primary" target="_blank">Request a Demo</a>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+ <footer>
+
+        <div class="container">
+            <div class="footer-brand-section">
+                <div class="logo">
+                    <img src="images/main logo.jpeg" alt="Bespoke Solutech" class="logo" width="50">
+                <p class="tagline">Digital Solutions, Professionally Operated.</p>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> sales@bespokesolutech.co.za</p>
+                    <p><i class="fas fa-phone"></i> 010 880 7341</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Midrand, South Africa</p>
+                </div>
+                 <!-- ===== SOCIAL ICONS ===== -->
+<div class="social-icons">
+    <a href="https://www.tiktok.com/@bespokesolutech?is_from_webapp=1&sender_device=pc" target="_blank" class="social-icon tiktok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://www.instagram.com/bespokesolutech/" target="_blank" class="social-icon instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://x.com/BespokeSolutech" target="_blank" class="social-icon twitter">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61587888885633" target="_blank" class="social-icon facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+</div>
+            </div>
+
+            <div class="footer-links-section">
+                <div class="footer-column">
+                    <h4>COMPANY</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>LEGAL</h4>
+                    <ul>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="refund-cancellation.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>OFFICE</h4>
+                    <address>
+                        Unit H22, Workpods<br>
+                        1024 Brand Road<br>
+                        President Park AH<br>
+                        Midrand, 1686<br>
+                        South Africa
+                    </address>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+    <p>
+        © <span id="year"></span> Bespoke Solutech. All rights reserved.
+    </p>
+</div>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+        </div>
+    </footer>
+
+<!-- ================= CHART.JS SCRIPT ================= -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctxLine = document.getElementById('auditLineChart').getContext('2d');
+new Chart(ctxLine, {
+    type: 'line',
+    data: {labels:['Week 1','Week 2','Week 3','Week 4'],datasets:[{label:'Audit Completion %',data:[65,72,78,85],borderColor:'#2e6cff',backgroundColor:'rgba(46,108,255,0.2)',fill:true,tension:0.4}]},
+    options:{responsive:true,plugins:{legend:{display:true}},scales:{y:{beginAtZero:true,max:100}}}
+});
+const ctxPie = document.getElementById('riskPieChart').getContext('2d');
+new Chart(ctxPie, {type:'pie',data:{labels:['Low','Medium','High'],datasets:[{label:'Risk Distribution',data:[50,30,20],backgroundColor:['#4caf50','#ffc107','#f44336']}]},options:{responsive:true}});
+const ctxBar = document.getElementById('tasksBarChart').getContext('2d');
+new Chart(ctxBar,{type:'bar',data:{labels:['Open Tasks','Completed Tasks','Exceptions'],datasets:[{label:'Tasks Overview',data:[14,42,5],backgroundColor:['#2e6cff','#4caf50','#f44336']}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
+</script>
+
+<!-- ================= MOBILE STICKY CTA ================= -->
+<a href="https://looom.co.za/contact/" class="mobile-sticky-cta" target="_blank">Request Demo</a>
+
+<style>
+/* Sticky CTA for mobile */
+.mobile-sticky-cta {
+    display: none; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #2e6cff;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 10000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    text-decoration: none;
+}
+
+/* Show only on mobile screens */
+@media (max-width:768px){
+    .mobile-sticky-cta {
+        display: block;
+    }
+}
+</style>
+
+</body>
+</html>

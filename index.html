@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bespoke Solutech • Digital Solutions, Professionally Operated</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+<style>
+/* ================= DROPDOWN ================= */
+.nav-menu li {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #2D1B4E;
+    border-radius: 6px;
+    min-width: 220px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    flex-direction: column;
+    z-index: 1000;
+}
+
+
+.dropdown.active .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content li {
+    width: 100%;
+}
+
+.dropdown-content a {
+    padding: 10px 15px;
+    display: block;
+    color: #fff;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background: #d09ed5;
+}
+.nav-menu li {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #2D1B4E;
+    border-radius: 6px;
+    min-width: 220px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    flex-direction: column;
+    z-index: 1000;
+}
+
+
+.dropdown.active .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content li {
+    width: 100%;
+}
+
+.dropdown-content a {
+    padding: 10px 15px;
+    display: block;
+    color: #fff;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background: #d09ed5;
+}
+
+
+.why-visual {
+    margin-top: 60px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.why-visual img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    opacity: 0.85; 
+    display: block;
+}
+.why-choose-us {
+    position: relative;
+}
+
+.why-visual img {
+    filter: brightness(0.8) contrast(1.05);
+}
+
+/* FOOTER SOCIAL ICONS MODERN STYLE */
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;           
+    height: 40px;            
+    border-radius: 50%;     
+    color: #fff;            
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+
+.social-icon.tiktok {
+    background-color: #000000;  
+}
+.social-icon.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); /* Instagram gradient */
+}
+.social-icon.x-twitter {
+    background-color: black;   
+}
+.social-icon.facebook {
+    background-color: #1877F2;  
+}
+
+/* HOVER EFFECTS */
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    opacity: 0.9;  /* Slightly transparent on hover for effect */
+}
+</style>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="images/main logo.jpeg" alt="Bespoke Solutech" class="logo" width="100">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+                    <!-- Legal & Policy Dropdown -->
+                <li class="dropdown">
+                    <a href="#">Legal & Policy ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy (POPIA compliant)</a></li>
+                        <li><a href="refund-cancellation.html">Refund & Cancellation Policy</a></li>
+                    </ul>
+                </li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="#contact" class="btn btn-purple">Contact Us</a>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span><span></span><span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="home" class="hero hero-dark">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="est-badge">
+  <span class="plum-text">'ESTABLISHED 2025</span>
+</div>
+                    <h1>Digital Solutions, <span class="highlight">Professionally</span> Operated.</h1>
+                    <p class="hero-text">Bespoke Solutech operates and manages digital products and services for businesses and organisations with professionalism, accountability, and long-term support.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-purple">Request Consultation</a>
+                        <a href="#products" class="btn btn-outline-light">Explore Our Solutions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+    <div class="container">
+
+        <h2>About Us</h2>
+
+        <div class="product-showcase">
+
+            <div class="product-content">
+                <p class="about-text">
+                    Bespoke Solutech is a digital solutions company that operates and manages digital products and services for businesses and organisations.
+                </p>
+
+                <p class="about-text">
+                    We focus on delivering reliable, professionally run digital solutions with clear accountability and long-term support.
+                </p>
+
+                <p class="about-text">
+                    Our work spans software, digital platforms, and technology-enabled services, prioritising operational discipline,
+                    transparency, and performance.
+                </p>
+
+                <div class="mission-vision">
+                    <div class="mission-card">
+                        <h3>MISSION</h3>
+                        <p>
+                            To operate and scale digital products with professionalism,
+                            accountability, and long-term commercial discipline.
+                        </p>
+                    </div>
+
+                    <div class="vision-card">
+                        <h3>VISION</h3>
+                        <p>
+                            To become a trusted digital operator known for running
+                            reliable, scalable, and responsibly managed solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-image about-images">
+
+                <img src="images/cloud.png"
+                     alt="Cloud Infrastructure">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+        <section id="products" class="products">
+            <div class="container">
+                <h2>Our Products</h2>
+                <div class="product-showcase">
+                    <div class="product-content">
+                        <h3>LOOOM AI</h3>
+                        <p class="product-category">Digital Audit Tool | AI Audit Tools | Audit Automation Software</p>
+                        <p class="product-description">LOOOM AI is an intelligent digital audit and risk assessment platform designed to modernise and automate compliance, governance, and internal audit processes. The system leverages artificial intelligence to streamline audit workflows, improve reporting accuracy, and enhance organisational oversight.</p>
+                        
+                        <div class="product-features">
+                            <span><i class="fas fa-robot"></i> Automated risk assessments</span>
+                            <span><i class="fas fa-diagram-project"></i> Intelligent audit workflows</span>
+                            <span><i class="fas fa-shield-alt"></i> AI-powered compliance tracking</span>
+                            <span><i class="fas fa-chart-pie"></i> Real-time reporting dashboards</span>
+                            <span><i class="fas fa-cloud"></i> Secure cloud infrastructure</span>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <span class="price-tag">Pricing available upon consultation</span>
+                        </div>
+                        
+                        <a href="product.html" class="btn btn-primary">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="product-image">
+                        <img src="https://placehold.co/600x500/7F5AF0/white?text=LOOOM+AI" alt="LOOOM AI Platform">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-choose-us" class="why-choose-us">
+            <div class="container">
+                <h2>Why Choose Us</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-cubes feature-icon"></i>
+                        <h3>Professional Digital Product Management</h3>
+                        <p>End-to-end operational management of your digital products with structured oversight.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-clipboard-check feature-icon"></i>
+                        <h3>Operational Discipline & Accountability</h3>
+                        <p>Clear accountability frameworks ensuring every solution is professionally supported.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line feature-icon"></i>
+                        <h3>Commercial Sustainability</h3>
+                        <p>Long-term technical and commercial sustainability for every solution we manage.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-eye feature-icon"></i>
+                        <h3>Transparent Governance</h3>
+                        <p>Clear reporting and governance structures that keep stakeholders informed.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-server feature-icon"></i>
+                        <h3>Scalable Infrastructure</h3>
+                        <p>Enterprise-grade digital infrastructure designed to grow with your business.</p>
+                    </div>
+                </div>
+                <div class="why-visual">
+    <img src="images/team.png" 
+         alt="Collaboration and Digital Operations">
+</div>
+            </div>
+        </section>
+
+        <section class="ready-cta">
+            <div class="container">
+                <div class="ready-content">
+                    <h2>Ready to Get Started?</h2>
+                    <p>Let's discuss how Bespoke Solutech can operate and manage your digital solutions with professionalism.</p>
+                    <br></div>
+                    <a href="#contact" class="btn btn-purple btn-large">
+  Request Consultation <i class="fas fa-arrow-right"></i>
+</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-infoo">
+                        <h3>Get in Touch</h3>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:sales@bespokesolutech.co.za">sales@bespokesolutech.co.za</a></p>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+27108807341">010 880 7341</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> Midrand, South Africa</p>
+                        
+                        <div class="office-address">
+                            <h4>Office</h4>
+                            <p>Unit H22, Workpods<br>
+                            1024 Brand Road<br>
+                            President Park AH<br>
+                            Midrand, 1686<br>
+                            South Africa</p>
+                        </div>
+                    </div>
+                    
+                   <div class="contact-form">
+    <form action="https://formspree.io/f/mkovapnr" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="text" name="company" placeholder="Company">
+        <input type="email" name="email" placeholder="Email Address" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        
+    </form>
+</div>
+                </div>
+
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.752106798348!2d28.12826731502996!3d-25.957141383556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956e6b8c1b3c4d%3A0x8a8e5c0a3e7b1a5!2sMidrand!5e0!3m2!1sen!2sza!4v1647886543210!5m2!1sen!2sza" width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+        <div class="container">
+            <div class="footer-brand-section">
+                <div class="logo">
+                    <img src="images/main logo.jpeg" alt="Bespoke Solutech" class="logo" width="50">
+                <p class="tagline">Digital Solutions, Professionally Operated.</p>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> sales@bespokesolutech.co.za</p>
+                    <p><i class="fas fa-phone"></i> 010 880 7341</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Midrand, South Africa</p>
+                </div>
+                 <!-- ===== SOCIAL ICONS ===== -->
+<div class="social-icons">
+    <a href="https://www.tiktok.com/@bespokesolutech?is_from_webapp=1&sender_device=pc" target="_blank" class="social-icon tiktok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://www.instagram.com/bespokesolutech/" target="_blank" class="social-icon instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://x.com/BespokeSolutech" target="_blank" class="social-icon twitter">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61587888885633" target="_blank" class="social-icon facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+</div>
+            </div>
+
+            <div class="footer-links-section">
+                <div class="footer-column">
+                    <h4>COMPANY</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>LEGAL</h4>
+                    <ul>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="refund-cancellation.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>OFFICE</h4>
+                    <address>
+                        Unit H22, Workpods<br>
+                        1024 Brand Road<br>
+                        President Park AH<br>
+                        Midrand, 1686<br>
+                        South Africa
+                    </address>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+    <p>
+        © <span id="year"></span> Bespoke Solutech. All rights reserved.
+    </p>
+</div>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+
+    // ===== MOBILE MENU =====
+    if (mobileMenu && navMenu) {
+        mobileMenu.addEventListener('click', function () {
+            mobileMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
+
+   
+    // === SMOOTH SCROLL ====
+document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === "#") return;
+       
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    });
+});
+
+    // ===== ACTIVE LINK HIGHLIGHT =====
+    window.addEventListener('scroll', function () {
+
+        const sections = document.querySelectorAll('section[id]');
+        const scrollPosition = window.scrollY + 120;
+
+        sections.forEach(function (section) {
+
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+
+            const navLink = document.querySelector('.nav-menu a[href="#' + sectionId + '"]');
+
+            if (!navLink) return;
+
+            if (
+                scrollPosition >= sectionTop &&
+                scrollPosition < sectionTop + sectionHeight
+            ) {
+                navLink.classList.add('active');
+            } else {
+                navLink.classList.remove('active');
+            }
+        });
+    });
+
+});
+
+</script>
+</body>
+</html>
